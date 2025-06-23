@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Success</title>
+    
+  <script>
+    function validateForm() {
+      var x = document.forms["Myform"]["phname"].value;
+      if (x == "" || x == null) {
+        alert("Brand must be filled out");
+      }
+    }
+    </script>
+
+</head>
+
+<style>
+
+header{
+  font-family: Dubai;
+  float: left;
+  font-family: 'Permanent Marker', cursive;
+  position: fixed;
+  display: flex;
+  padding-left: 60px;
+  height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color:#FFAEBC;
+}
+
+body {
+  background-image: url("https://asaransom.com/wp-content/uploads/2018/12/shopping-in-east-aurora-ny-1500x609.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+p{
+margin-left: 40px;
+font-size: 30px;
+margin-top:10px;
+}
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  max-width: 60%;
+  background: white;
+  text-align: left;
+}
+
+form.search button {
+  max-width: 30%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: green;
+  color: white;
+}
+
+.search::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width:200px)
+{
+body,form.search input,form.search button{
+width: 100%;
+margin: 100px 0px 0px 100px;
+}
+}
+
+div{
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  float: top-right;
+  display: grid;
+}
+
+.dropbtn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+font-size: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: none;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.active{
+background: green;
+}
+
+#share{
+  display:flex;
+  justify-items: auto;
+  height: 100%;
+  width:50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #111;
+  padding-top: 50px;
+}
+#share > ul > li > a:hover{
+  font-size:45px;
+  margin: 10px;
+}
+#share > ul{
+  padding:0;
+}
+.ph_img{
+  margin-left:100px;
+  display:grid;
+  grid: auto / auto auto auto;
+  list-style:none;
+}
+
+h1{
+font-size: 50px;
+margin-top: 0px;
+text-align: center;
+margin-left: 0;
+color: white;
+display: flex;
+justify-content: center;
+}
+
+footer {
+margin-top: 70px;
+padding: 20px;
+color : white;
+background-color: #B6B6B4;
+max-width: 200%;
+}
+
+footer > ul
+{
+display: flex;
+justify-content: flex-end;
+}
+
+footer > ul > li
+{
+padding: 0px 10px;
+list-style:none;
+text-decoration: none;
+}
+
+footer > span
+{
+margin-top: 5px;
+display: flex;
+justify-content: flex-end;
+font-size: 0.9em;
+color: black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header id="header">
+    <div class="dropdown">
+  <button class="dropbtn">
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+  </button>
+  <section class="dropdown-content">
+  <a href="#home" class="active">Home</a>
+  <a href="{% url 'About' %}" target="_blank">About</a>
+  </section>
+    </div>
+    <p class="w3-text-aqua">PROZER</p>
+</header>
+
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h1>
+  <br>
+    Welcome To PROZER
+</h1>
+<section id="share">
+  <ul style="display: grid; bottom:auto; flex-wrap: wrap; width: auto; list-style:none;margin-left:2px">
+  <li><a href="https://www.facebook.com/"><i style="border: 5px solid black; background-color: #4169E1; border-radius: 30px; margin:8px; padding: 15px 10px ; font-size: 40px" class="fab fa-facebook-f"></i></a></li>
+  <li><a href="https://www.whatsapp.com/"><i style="border: 5px solid black; background-color: #00FF7F; border-radius: 30px; margin: 8px; padding: 15px 10px ;font-size: 40px" class="fab fa-whatsapp"></i></a></li>
+  <li><a href="https://www.instagram.com/?hl=en"><i style="border: 5px solid black; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); border-radius: 30px; margin: 8px; padding: 15px 10px; font-size: 40px" class="fa fa-instagram"></i></a></li>
+  <li><a href="https://twitter.com/i/flow/login"><i style="border: 5px solid black; background-color: #00FFFF; border-radius: 30px; margin: 8px ; padding: 15px 10px; font-size: 40px" class="fab fa-twitter"></i></a></li>
+  <li><a href="https://web.telegram.org/z/"><i style="border: 5px solid black; background-color: #00BFFF; border-radius: 30px; margin: 8px; padding: 15px 10px; font-size: 40px" class="fas fa-paper-plane"></i></a></li>
+  </ul>
+  </section>
+
+<form class="search" action="search" target="_blank" style="text-align: center; display: flex; justify-content: center" name="Myform" method='post'>
+  {% csrf_token %}
+<input style="margin: 150px 0px 0px 300px; border-radius: 10px " type="text" placeholder="Search.." name='phname' required>
+<button style="margin: 150px 280px 0px 0px; border-radius: 10px" type="submit"  onclick = "validateForm()"><i class="fa fa-search">
+</i> </button>
+
+</form>
+
+<h1 style="font-size: 50px">Top Brands are in lowest price</h1>
+
+<marquee scrollamount='7' direction="up" width="60%" height="150px" style="margin-left: 35%;align-items:center; animation: blinker 1.5s linear infinite">
+    <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1389401031&ref_=sv_top_elec_mega_1"><img src="https://www.versionmuseum.com/images/websites/amazon-website/amazon-website%5E2000%5Elogo-iteration-nocom.jpg" style="height: 150px;  padding : 50px; width:300px"></a><br>
+    <a href="https://www.flipkart.com/mobiles-big-saving-days-apr22-6c7d-j4nx-store?param=19867736376343&fm=neo%2Fmerchandising&iid=M_363e28ee-7680-4d56-b280-9286d0a0c8d1_1_FCGZ4MG6N53B_MC.AIDH8F3BCTJQ&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Mobiles_AIDH8F3BCTJQ&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=AIDH8F3BCTJQ"><img src="https://blog.grabon.in/wp-content/uploads/2018/12/Flipkart-Logo.jpg" style="height: 150px; width: 300px; padding : 50px"></a><br>
+    <a href="https://www.reliancedigital.in/smartphones/c/S101711"><img src="https://dog55574plkkx.cloudfront.net/storelogo/web/Reliance-Digital.png" style="height: 150px; padding : 50px; width:300px"></a><br>
+</marquee>
+
+<section>
+<ul class="ph_img">
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://logowik.com/content/uploads/images/oppo.jpg"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://vectorseek.com/wp-content/uploads/2021/01/Realme-Logo-Vector-scaled.jpg"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://www.kindpng.com/picc/m/9-91204_vivo-mobile-phones-hd-png-download.png"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://www.designyourway.net/blog/wp-content/uploads/2019/10/s1-6-1.jpg"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://www.nicepng.com/png/detail/759-7590156_computer-mouse-pointer-arrow-clip-art-mouse-cursor.png"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://cheapcellphones.com/wp-content/uploads/iPhone-logo.jpg"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="https://www.nokia.com/sites/default/files/2021-08/NOKIA_LOGO_RGB_HR.jpg"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="data:image/png;base64,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"></li>
+  <li><img style="width:300px; height:150px; margin: 10px" src="data:image/png;base64,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"></li>
+</ul>
+
+</section>
+<h1 style="text-align: center;"> GRAB THE OPPORTUNITY, DON'T MISS IT</h1>
+<footer>
+<ul style="text-decoration: none">
+<li><a href="#">Privacy</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Policy</a></li>
+</ul>
+<span> copyrights @2022. Product Analyzer.pvt.lmt </span>
+</footer>
+</body>
+</html>

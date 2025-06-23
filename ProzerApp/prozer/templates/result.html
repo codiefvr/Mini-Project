@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta Stencil">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frijole">
+    <title>Result page</title>
+<style>
+
+body{
+    background-color: #000000;
+    background-image: url("https://i.pinimg.com/originals/f7/2d/2f/f72d2fa3f5afdd030268b82a2ccb91b4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+   
+.block{
+        border: 2px solid silver;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 20px;
+        padding: 10px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+        margin-top: 200px;
+        margin: 20px;
+        width: fit-content;
+        font-family: Allerta Stencil;
+}
+.block:hover{
+    margin:10px;
+    border: 10px solid gainsboro;
+    cursor:pointer;
+}
+.blocks_arngmt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 20px;
+    font-family: Allerta Stencil;
+}
+.blocks{
+        border: 2px solid silver;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 20px;
+        padding: 10px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+        margin-top: 250px;
+        margin: 20px;
+        width: fit-content;
+        position: relative;
+}
+        .blocks:hover{
+        animation: swinger 1s ease-in-out alternate infinite;
+        transform-origin: center -20px;
+        }
+
+    .blocks::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        top: -40px;
+        background-color: #000000;
+        left: 50%;
+        border-radius: 50%;
+    }
+    .blocks::after{
+        position: absolute;
+        content:'';
+        width: 8px;
+        height: 40px;
+        top: -43px;
+        z-index: -1px;
+        border: 1px solid #ffffff;
+        left: 50%;
+    }
+    @keyframes swinger{
+        0%{
+            transform: rotate(3deg);
+        }
+        100%{
+            transform: rotate(-3deg);
+        }
+    }
+
+    .for_button input{
+    text-align:center;
+    border : 2px solid;
+    border-radius :20px;
+    text-align : center;
+    margin: 0px 90px;
+    padding : 10px 20px 10px 20px;
+    color:white;
+    background-color:rgb(12, 12, 135);
+    font-size: 15px;
+}
+
+    .for_button input:hover{
+    cursor: pointer;
+    background-color:mediumspringgreen;
+    color:black;
+    }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.img_phn{
+    margin-top:30px;
+    font-size: 40px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 200;
+    color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="text-align: center;color:white;margin-top:100px;font-family: Frijole;">Showing Results of : {{phname}} </h1><br> 
+
+<h1 style="text-align: center;color:white;font-family: Frijole;">Our Suggestion is.....</h1>
+<div class="img_phn">
+<img src="{{img}}" width='30%' height='40%' class="center" ><h2 style="margin-top: 30px;">{{phname}}</h2></div>
+
+
+<div class="block"><h1>
+    {% if min_value == 0 and ph_name1 != 1 and link1 %}
+    <h1><center>Amazon</center>
+    {% for name in ph_name1 %} 
+    {{name}}<br>
+    <br>
+    {% endfor %}<br></h1>
+    <div class="for_button">
+    <a href="{{link1}}"><input style="margin: 0px 100px" type="submit" value="visit"></a>
+    </div>
+    {% elif min_value == 1 and ph_name2 != 1 and link2 %}
+    <h1><center>Flipkart</center>
+    {% for name in ph_name2 %} 
+    {{name}}<br>
+    <br>
+    {% endfor %}<br></h1>
+    <div class="for_button">
+    <a href="{{link2}}"><input style="margin: 0px 100px" type="submit" value="visit"></a>
+    </div>
+    {% elif min_value == 2 and ph_name3 != 1 and link3 %}
+    <h1><center>Reliance</center>
+    {% for name in ph_name3 %}
+    {{name}}<br>
+    <br>
+    {% endfor %}<br></h1>
+    <div class="for_button">
+    <a href="{{link3}}"><input style="margin: 0px 100px" type="submit" value="visit"></a>
+    </div>
+    {% endif %}</div>
+
+<div class ="blocks_arngmt">
+<h1 class="blocks">
+    <center>Amazon</center> <br>
+    {% if ph_name1 != 1 and ph_name1 is not None %}
+        {% for name in ph_name1 %}
+            {{name}}<br>
+            <br>
+        {% endfor %}<br>
+        <div class="for_button">
+        {% if link1 %}
+        <a href="{{link1}}"><input type="submit" value="visit"></a>
+        </div>
+        {% endif %}
+    {% else %}
+    please visit the website</h1>
+    <div class="for_button">
+        {% if link1 %}
+        <a href="{{link1}}"><input type="submit" value="visit"></a>
+        {% endif %}
+    </div>
+    {% endif %}
+<h1 class="blocks"><center>Flipkart</center> <br>
+    {% if ph_name2 != 1 and ph_name2 is not None %}
+        {% for name in ph_name2 %} 
+            {{name}}<br>
+            <br>
+        {% endfor %}<br>
+        <div class="for_button">
+        {% if link2 %}
+        <a href="{{link2}}"><input type="submit" value="visit"></a>
+        {% endif %}
+        </div>
+    {% else %}
+    please visit the website
+    <div class="for_button">
+        {% if link2 %}
+        <a href="{{link2}}"><input type="submit" value="visit"></a>
+        {% endif %}
+        </div></h1>
+    {% endif %}
+<h1 class="blocks"><center>Reliance</center><br>
+    {% if ph_name3 != 1 and ph_name3 is not None %}
+    {% for name in ph_name3 %}
+    {{name}}<br>
+    <br>
+    {% endfor %}<br>
+    <div class="for_button">
+        {% if link3 %}
+        <a href="{{link3}}"><input type="submit" value="visit"></a>
+         {% endif %}
+    </div>
+    {% else %}
+    please visit the website
+    <div class="for_button">
+        {% if link3 %}
+        <a href="{{link3}}"><input type="submit" value="visit"></a>
+         {% endif %}
+    </div></h1>
+    {% endif %}
+    
+</div>
+
+</body>
+</html>
